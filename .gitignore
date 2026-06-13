@@ -1,0 +1,100 @@
+# ════════════════════════════════
+# ENVIRONMENT & SECRETS
+# ════════════════════════════════
+.env
+.env.*
+.env.local
+.env.production
+.env.staging
+!.env.example          # Keep the example template
+
+# ════════════════════════════════
+# PYTHON
+# ════════════════════════════════
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.log
+
+# ════════════════════════════════
+# JUPYTER NOTEBOOKS
+# ════════════════════════════════
+notebooks/.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ════════════════════════════════
+# NODE / NEXT.JS (frontend)
+# ════════════════════════════════
+node_modules/
+.next/
+out/
+.cache/
+*.tsbuildinfo
+npm-debug.log*
+yarn-error.log*
+
+# ════════════════════════════════
+# DATA (never commit raw data)
+# ════════════════════════════════
+data/raw/
+data/processed/
+*.csv
+*.json.gz
+*.parquet
+
+# ════════════════════════════════
+# dbt
+# ════════════════════════════════
+services/analytics/target/
+services/analytics/dbt_packages/
+services/analytics/logs/
+
+# ════════════════════════════════
+# AIRFLOW
+# ════════════════════════════════
+infrastructure/airflow/logs/
+infrastructure/airflow/plugins/__pycache__/
+
+# ════════════════════════════════
+# DOCKER
+# ════════════════════════════════
+*.override.yml             # Local docker-compose overrides
+
+# ════════════════════════════════
+# TERRAFORM
+# ════════════════════════════════
+infrastructure/terraform/.terraform/
+infrastructure/terraform/*.tfstate
+infrastructure/terraform/*.tfstate.backup
+infrastructure/terraform/*.tfvars   # Contains real credentials
+
+# ════════════════════════════════
+# GREAT EXPECTATIONS
+# ════════════════════════════════
+great_expectations/uncommitted/
+
+# ════════════════════════════════
+# OS FILES
+# ════════════════════════════════
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ════════════════════════════════
+# IDE
+# ════════════════════════════════
+.vscode/settings.json     # Keep .vscode/extensions.json (share recommendations)
+.idea/
+*.swp
+*.swo
